@@ -1,0 +1,6 @@
+dist_bin_SCRIPTS = addAdditionalIncludes.x	addCoreFeatureToInterface.x addInterfaceToHost.x AllLineMarkersExtractor.x createInterface.x c.x ExtractAllDefinedFunctionsName.x ExtractAllFunctionsNameInAFile.x ExtractGlobalDefinitionStructDeclarations.x GenerateDeclarationDependenciesForDonorVariablesInAbstractMappings.x GenerateSymbolTableForLocalDefinedVariables.x GlobalVarTypesDeclDependencyCOREFUNCTIONS.x GlobalVarTypesDeclDependencyINTERFACE.x graftSymbolTable.x HostSymbolTable.x ifdef.x InsertAllSourceCodeFromInputAtTheBegginingOfOutput.x instantiateFunctionsInSkeleton.x instantiateSkeletonInInterface.x MarkFunctionCall.x multiplFiles.x MutationCandidateExtractor.x PrettyPrintWithAnnotations.x readReverseCallGraph.x replaceStaticFunctions.x SolveDeclarationDependencies.x uniqueLocalVarDecls.x addMarkersAtGoto.x
+
+CLEANFILES = $(dist_bin_SCRIPTS)
+
+%.x : %.txl
+	txlc -s 4000 $<
